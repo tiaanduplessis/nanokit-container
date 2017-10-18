@@ -1,0 +1,37 @@
+{
+  "name": "nanokit-container",
+  "version": "1.0.0",
+  "description": "Container component for React Native",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/tiaanduplessis/nanokit-container",
+    "type": "git"
+  },
+  "homepage": "https://github.com/tiaanduplessis/nanokit-container",
+  "bugs": "https://github.com/tiaanduplessis/nanokit-container",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "echo 'no tests'",
+    "format": "prettier-standard index.js",
+    "start": "npm run test",
+    "precommit": "npm test",
+    "pretest": "npm run format",
+    "docs": "react-docgen index.js --pretty"
+  },
+  "author": "tiaanduplessis <tiaanduplessis@hotmail.com>",
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "prettier-standard": "^7.0.3"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react-docgen": "^2.19.0"
+  }
+}
