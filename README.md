@@ -55,6 +55,8 @@
 
 ## Install
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tiaanduplessis/nanokit-container.svg)](https://greenkeeper.io/)
+
 ```sh
 $ npm install nanokit-container
 # OR
