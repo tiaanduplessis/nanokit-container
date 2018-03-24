@@ -21,7 +21,7 @@ const Container = ({
   }
 
   return (
-    <View style={[styles.container, containerStyles]} {...otherProps}>
+    <View style={[styles.container, containerStyles, style]} {...otherProps}>
       {children}
     </View>
   )
