@@ -67,7 +67,7 @@ $ yarn add nanokit-container
 
 ```js
 import {Text} from 'react-native'
-import Container form 'nanokit-container'
+import Container from 'nanokit-container'
 
 const Foo = () => <Container />
 const Baz = () => <Container center backgroundColor="tomato"><Text>Hi</Text></Container>
