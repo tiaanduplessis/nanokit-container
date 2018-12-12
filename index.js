@@ -1,6 +1,6 @@
-import React from "react"
-import PropTypes from "prop-types"
-import { View, StyleSheet, SafeAreaView, Platform } from "react-native"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { View, StyleSheet, SafeAreaView, Platform } from 'react-native'
 /**
  * Basic container component that is just a wrapper around a View component.
  */
@@ -13,16 +13,16 @@ const Container = ({
   ...otherProps
 }) => {
   const containerStyles = { padding, backgroundColor }
-  const isIOS = Platform.OS === "ios" ? true : false
+  const isIOS = Platform.OS === 'ios'
 
   if (center) {
-    containerStyles.alignItems = "center"
-    containerStyles.justifyContent = "center"
+    containerStyles.alignItems = 'center'
+    containerStyles.justifyContent = 'center'
   }
 
   if (isIOS && parseInt(Platform.Version, 10) >= 11) {
     return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: "#fff" }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
         <View
           style={[styles.container, containerStyles, style]}
           {...otherProps}
@@ -57,7 +57,7 @@ Container.propTypes = {
 
 Container.defaultProps = {
   padding: 0,
-  backgroundColor: "#fff"
+  backgroundColor: '#fff'
 }
 
 const styles = StyleSheet.create({

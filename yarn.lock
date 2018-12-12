@@ -1020,11 +1020,6 @@ react-docgen@^2.19.0:
     node-dir "^0.1.10"
     recast "^0.12.6"
 
-react-native-device@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-device/-/react-native-device-1.0.1.tgz#7942f74fd6166564337d9375cae3de8aede81ba8"
-  integrity sha1-eUL3T9YWZWQzfZN1yuPeiu3oG6g=
-
 readable-stream@^2.2.2:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.3.tgz#368f2512d79f9d46fdfc71349ae7878bbc1eb95c"
