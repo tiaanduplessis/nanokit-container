@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, StyleSheet } from 'react-native'
-
+import { View, StyleSheet, SafeAreaView, Platform } from 'react-native'
 /**
  * Basic container component that is just a wrapper around a View component.
  */
+const isIOS = Platform.OS === 'ios'
+const VERSION = parseInt(Platform.Version, 10)
 const Container = ({
   style,
   children,
@@ -20,6 +21,19 @@ const Container = ({
     containerStyles.justifyContent = 'center'
   }
 
+  if (isIOS && VERSION >= 11) {
+    return (
+      <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
+        <View
+          style={[styles.container, containerStyles, style]}
+          {...otherProps}
+        >
+          {children}
+        </View>
+      </SafeAreaView>
+    )
+  }
+
   return (
     <View style={[styles.container, containerStyles, style]} {...otherProps}>
       {children}
@@ -29,16 +43,16 @@ const Container = ({
 
 Container.propTypes = {
   /**
-     * Shorthand for adding padding to the View.
-     */
+   * Shorthand for adding padding to the View.
+   */
   padding: PropTypes.number,
   /**
-     * Shorthand to add padding to the View.
-     */
+   * Shorthand to add padding to the View.
+   */
   backgroundColor: PropTypes.string,
   /**
-     * Shorthand to center children.
-     */
+   * Shorthand to center children.
+   */
   center: PropTypes.bool
 }
 
