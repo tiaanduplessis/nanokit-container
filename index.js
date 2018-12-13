@@ -4,6 +4,8 @@ import { View, StyleSheet, SafeAreaView, Platform } from 'react-native'
 /**
  * Basic container component that is just a wrapper around a View component.
  */
+const isIOS = Platform.OS === 'ios'
+const VERSION = parseInt(Platform.Version, 10)
 const Container = ({
   style,
   children,
@@ -13,14 +15,13 @@ const Container = ({
   ...otherProps
 }) => {
   const containerStyles = { padding, backgroundColor }
-  const isIOS = Platform.OS === 'ios'
 
   if (center) {
     containerStyles.alignItems = 'center'
     containerStyles.justifyContent = 'center'
   }
 
-  if (isIOS && parseInt(Platform.Version, 10) >= 11) {
+  if (isIOS && VERSION >= 11) {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
         <View
