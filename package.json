@@ -32,6 +32,6 @@
   },
   "dependencies": {
     "prop-types": "^15.6.0",
-    "react-docgen": "^2.19.0"
+    "react-docgen": "^4.0.0"
   }
 }
