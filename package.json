@@ -27,7 +27,7 @@
     "react-native": "*"
   },
   "devDependencies": {
-    "husky": "^1.0.0",
+    "husky": "^2.1.0",
     "prettier-standard": "^8.0.0"
   },
   "dependencies": {
